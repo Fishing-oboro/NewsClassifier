@@ -9,7 +9,7 @@ def load_csv(url):
     categories = []
     titles = []
     articles = []
-    with open(url) as f:
+    with open(url, encoding='utf-8') as f:
         reader = csv.DictReader(f)
         # 辞書から本文配列を取得 →　articles = type(list)
         for row in reader:
